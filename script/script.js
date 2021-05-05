@@ -1,7 +1,25 @@
+
+// BONUS: (da fare solo se funziona tutto il resto)
+// all'inizio il software richiede anche una difficoltà all'utente che cambia il range di numeri casuali:
+// con difficoltà 0 => tra 1 e 100
+// con difficoltà 1 => tra 1 e 80
+// con difficoltà 2 => tra 1 e 50
+
+do {
+   var difficulty = parseInt(prompt("Scegli una difficoltà da 0 a 2:"));
+} while (difficulty <0 || difficulty > 2);
+
+if (difficulty == 0) {
+   maxRange = 100;
+} else if (difficulty ==1) {
+   maxRange = 80;
+} else {
+   maxRange = 50;
+}
+
 var bombs = [];
 var playerChoise = [];
 var maxBombs = 16;
-var maxRange = 100
 
 // Il computer deve generare 16 numeri casuali tra 1 e 100.
 // I numeri non possono essere duplicati.
@@ -20,7 +38,6 @@ console.log(bombs);
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all'utente un altro numero.
 
 var maxAttempts = 100 - bombs.length;
-maxAttempts = 5; //da cancellare
 var gameOver = false;
 
 do {
@@ -38,23 +55,8 @@ do {
 } while (playerChoise.length < maxAttempts && gameOver == false);
 console.log(playerChoise);
 
-console.log("Il tuo punteggio è: " + playerChoise.length);
-
 // La partita termina quando il giocatore inserisce un numero "vietato" o raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l'utente ha inserito un numero consentito.
 
+console.log("Il tuo punteggio è: " + playerChoise.length);
 
-
-
-
-
-
-
-
-
-
-// BONUS: (da fare solo se funziona tutto il resto)
-// all'inizio il software richiede anche una difficoltà all'utente che cambia il range di numeri casuali:
-// con difficoltà 0 => tra 1 e 100
-// con difficoltà 1 => tra 1 e 80
-// con difficoltà 2 => tra 1 e 50
