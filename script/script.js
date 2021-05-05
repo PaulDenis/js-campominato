@@ -40,7 +40,7 @@ console.log(bombs);
 // L'utente non può inserire più volte lo stesso numero.
 // Se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti si continua chiedendo all'utente un altro numero.
 
-var maxAttempts = 100 - bombs.length; //bombs.length invece che 16 così se voglio cambiare il numero di bombe non rischio di sbagliare.
+var maxAttempts = maxRange - bombs.length; //bombs.length invece che 16 così se voglio cambiare il numero di bombe non rischio di sbagliare.
 var gameOver = false;
 
 do {
