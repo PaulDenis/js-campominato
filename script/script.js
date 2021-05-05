@@ -68,4 +68,3 @@ if (gameOver == true) {
 } else {
    console.log("Congratulazioni! Hai vinto! Il tuo punteggio è: " + playerChoise.length);
 }
-
