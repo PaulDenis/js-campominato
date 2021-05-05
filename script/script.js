@@ -64,7 +64,7 @@ console.log(playerChoise);
 // La partita termina quando il giocatore inserisce un numero "vietato" o raggiunge il numero massimo possibile di numeri consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l'utente ha inserito un numero consentito.
 if (gameOver == true) {
-   console.log("Hai perso. " + "Il tuo punteggio è: " + playerChoise.length);
+   console.log("Hai perso. " + "Il tuo punteggio è: " + playerChoise.length*(difficulty+1));
 } else {
-   console.log("Congratulazioni! Hai vinto! Il tuo punteggio è: " + playerChoise.length);
+   console.log("Congratulazioni! Hai vinto! Il tuo punteggio è: " + playerChoise.length*(difficulty+1));
 }
